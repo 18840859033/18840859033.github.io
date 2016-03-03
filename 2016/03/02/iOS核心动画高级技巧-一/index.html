@@ -6,18 +6,39 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>iOS核心动画高级技巧(一) | XiaoQi的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.1图层与视图如果你曾经在iOS或者Mac OS平台上写过应用程序，你可能会对视图的概念比较熟悉。一个视图就是在屏幕上显示的一个矩形块（比如图片，文字或者视频），它能够拦截类似于鼠标点击或者触摸手势等用户输入。视图在层级关系中可以互相嵌套，一个视图可以管理它的所有子视图的位置。图1.1显示了一种典型的视图层级关系">
+  <meta name="description" content="1.1图层与视图
+CALayer
+平行的层级关系
+
+
+
+
+1.1图层与视图如果你曾经在iOS或者Mac OS平台上写过应用程序，你可能会对视图的概念比较熟悉。一个视图就是在屏幕上显示的一个矩形块（比如图片，文字或者视频），它能够拦截类似于鼠标点击或者触摸手势等用户输入。视图在层级关系中可以互相嵌套，一个视图可以管理它的所有子视图的位置。图1.1显示了一种典型的视图层级关系">
 <meta property="og:type" content="article">
 <meta property="og:title" content="iOS核心动画高级技巧(一)">
 <meta property="og:url" content="http://18840859033.github.io/2016/03/02/iOS核心动画高级技巧-一/index.html">
 <meta property="og:site_name" content="XiaoQi的博客">
-<meta property="og:description" content="1.1图层与视图如果你曾经在iOS或者Mac OS平台上写过应用程序，你可能会对视图的概念比较熟悉。一个视图就是在屏幕上显示的一个矩形块（比如图片，文字或者视频），它能够拦截类似于鼠标点击或者触摸手势等用户输入。视图在层级关系中可以互相嵌套，一个视图可以管理它的所有子视图的位置。图1.1显示了一种典型的视图层级关系">
+<meta property="og:description" content="1.1图层与视图
+CALayer
+平行的层级关系
+
+
+
+
+1.1图层与视图如果你曾经在iOS或者Mac OS平台上写过应用程序，你可能会对视图的概念比较熟悉。一个视图就是在屏幕上显示的一个矩形块（比如图片，文字或者视频），它能够拦截类似于鼠标点击或者触摸手势等用户输入。视图在层级关系中可以互相嵌套，一个视图可以管理它的所有子视图的位置。图1.1显示了一种典型的视图层级关系">
 <meta property="og:image" content="https://zsisme.gitbooks.io/ios-/content/chapter1/1.1.jpeg">
 <meta property="og:image" content="https://zsisme.gitbooks.io/ios-/content/chapter1/1.2.jpeg">
-<meta property="og:updated_time" content="2016-03-03T07:07:52.000Z">
+<meta property="og:updated_time" content="2016-03-03T07:19:32.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS核心动画高级技巧(一)">
-<meta name="twitter:description" content="1.1图层与视图如果你曾经在iOS或者Mac OS平台上写过应用程序，你可能会对视图的概念比较熟悉。一个视图就是在屏幕上显示的一个矩形块（比如图片，文字或者视频），它能够拦截类似于鼠标点击或者触摸手势等用户输入。视图在层级关系中可以互相嵌套，一个视图可以管理它的所有子视图的位置。图1.1显示了一种典型的视图层级关系">
+<meta name="twitter:description" content="1.1图层与视图
+CALayer
+平行的层级关系
+
+
+
+
+1.1图层与视图如果你曾经在iOS或者Mac OS平台上写过应用程序，你可能会对视图的概念比较熟悉。一个视图就是在屏幕上显示的一个矩形块（比如图片，文字或者视频），它能够拦截类似于鼠标点击或者触摸手势等用户输入。视图在层级关系中可以互相嵌套，一个视图可以管理它的所有子视图的位置。图1.1显示了一种典型的视图层级关系">
 <meta name="twitter:image" content="https://zsisme.gitbooks.io/ios-/content/chapter1/1.1.jpeg">
   
     <link rel="alternative" href="/atom.xml" title="XiaoQi的博客" type="application/atom+xml">
@@ -204,7 +225,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <!--toc-->
+        <!-- toc -->
+<ul>
+<li><a href="#11&#x56FE;&#x5C42;&#x4E0E;&#x89C6;&#x56FE;">1.1&#x56FE;&#x5C42;&#x4E0E;&#x89C6;&#x56FE;</a><ul>
+<li><a href="#calayer">CALayer</a></li>
+<li><a href="#&#x5E73;&#x884C;&#x7684;&#x5C42;&#x7EA7;&#x5173;&#x7CFB;">&#x5E73;&#x884C;&#x7684;&#x5C42;&#x7EA7;&#x5173;&#x7CFB;</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
 <h1 id="11&#x56FE;&#x5C42;&#x4E0E;&#x89C6;&#x56FE;"><a href="#1-1&#x56FE;&#x5C42;&#x4E0E;&#x89C6;&#x56FE;" class="headerlink" title="1.1&#x56FE;&#x5C42;&#x4E0E;&#x89C6;&#x56FE;"></a>1.1&#x56FE;&#x5C42;&#x4E0E;&#x89C6;&#x56FE;</h1><p>&#x5982;&#x679C;&#x4F60;&#x66FE;&#x7ECF;&#x5728;iOS&#x6216;&#x8005;Mac OS&#x5E73;&#x53F0;&#x4E0A;&#x5199;&#x8FC7;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x4F60;&#x53EF;&#x80FD;&#x4F1A;&#x5BF9;&#x89C6;&#x56FE;&#x7684;&#x6982;&#x5FF5;&#x6BD4;&#x8F83;&#x719F;&#x6089;&#x3002;&#x4E00;&#x4E2A;&#x89C6;&#x56FE;&#x5C31;&#x662F;&#x5728;&#x5C4F;&#x5E55;&#x4E0A;&#x663E;&#x793A;&#x7684;&#x4E00;&#x4E2A;&#x77E9;&#x5F62;&#x5757;&#xFF08;&#x6BD4;&#x5982;&#x56FE;&#x7247;&#xFF0C;&#x6587;&#x5B57;&#x6216;&#x8005;&#x89C6;&#x9891;&#xFF09;&#xFF0C;&#x5B83;&#x80FD;&#x591F;&#x62E6;&#x622A;&#x7C7B;&#x4F3C;&#x4E8E;&#x9F20;&#x6807;&#x70B9;&#x51FB;&#x6216;&#x8005;&#x89E6;&#x6478;&#x624B;&#x52BF;&#x7B49;&#x7528;&#x6237;&#x8F93;&#x5165;&#x3002;&#x89C6;&#x56FE;&#x5728;&#x5C42;&#x7EA7;&#x5173;&#x7CFB;&#x4E2D;&#x53EF;&#x4EE5;&#x4E92;&#x76F8;&#x5D4C;&#x5957;&#xFF0C;&#x4E00;&#x4E2A;&#x89C6;&#x56FE;&#x53EF;&#x4EE5;&#x7BA1;&#x7406;&#x5B83;&#x7684;&#x6240;&#x6709;&#x5B50;&#x89C6;&#x56FE;&#x7684;&#x4F4D;&#x7F6E;&#x3002;&#x56FE;1.1&#x663E;&#x793A;&#x4E86;&#x4E00;&#x79CD;&#x5178;&#x578B;&#x7684;&#x89C6;&#x56FE;&#x5C42;&#x7EA7;&#x5173;&#x7CFB;<br>  <a id="more"></a></p>
 <p><img src="https://zsisme.gitbooks.io/ios-/content/chapter1/1.1.jpeg" alt="&#x56FE;1.1"></p>
 <p>&#x56FE;1.1 &#x4E00;&#x79CD;&#x5178;&#x578B;&#x7684;iOS&#x5C4F;&#x5E55;&#xFF08;&#x5DE6;&#x8FB9;&#xFF09;&#x548C;&#x5F62;&#x6210;&#x89C6;&#x56FE;&#x7684;&#x5C42;&#x7EA7;&#x5173;&#x7CFB;&#xFF08;&#x53F3;&#x8FB9;&#xFF09;<br>  &#x5728;iOS&#x5F53;&#x4E2D;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x89C6;&#x56FE;&#x90FD;&#x4ECE;&#x4E00;&#x4E2A;&#x53EB;&#x505A;UIVIew&#x7684;&#x57FA;&#x7C7B;&#x6D3E;&#x751F;&#x800C;&#x6765;&#xFF0C;UIView&#x53EF;&#x4EE5;&#x5904;&#x7406;&#x89E6;&#x6478;&#x4E8B;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x652F;&#x6301;&#x57FA;&#x4E8E;Core Graphics&#x7ED8;&#x56FE;&#xFF0C;&#x53EF;&#x4EE5;&#x505A;&#x4EFF;&#x5C04;&#x53D8;&#x6362;&#xFF08;&#x4F8B;&#x5982;&#x65CB;&#x8F6C;&#x6216;&#x8005;&#x7F29;&#x653E;&#xFF09;&#xFF0C;&#x6216;&#x8005;&#x7B80;&#x5355;&#x7684;&#x7C7B;&#x4F3C;&#x4E8E;&#x6ED1;&#x52A8;&#x6216;&#x8005;&#x6E10;&#x53D8;&#x7684;&#x52A8;&#x753B;&#x3002;</p>
