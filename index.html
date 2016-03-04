@@ -198,6 +198,9 @@
 <li><a href="#平行的层级关系">平行的层级关系</a></li>
 </ul>
 </li>
+<li><a href="#12图层的能力">1.2图层的能力</a></li>
+<li><a href="#13使用图层">1.3使用图层</a></li>
+<li><a href="#总结">总结</a></li>
 </ul>
 <!-- tocstop -->
 <h1 id="1-1图层与视图"><a href="#1-1图层与视图" class="headerlink" title="1.1图层与视图"></a>1.1图层与视图</h1><p>如果你曾经在iOS或者Mac OS平台上写过应用程序，你可能会对视图的概念比较熟悉。一个视图就是在屏幕上显示的一个矩形块（比如图片，文字或者视频），它能够拦截类似于鼠标点击或者触摸手势等用户输入。视图在层级关系中可以互相嵌套，一个视图可以管理它的所有子视图的位置。图1.1显示了一种典型的视图层级关系<br>
@@ -260,124 +263,30 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong><em>Hexo&#x5E38;&#x7528;&#x547D;&#x4EE4;</em></strong></p>
+        <p><strong><em>Hexo常用命令</em></strong></p>
 <!-- toc -->
 <ul>
 <li><a href="#hexo">Hexo</a></li>
-<li><a href="#&#x7B80;&#x5199;">&#x7B80;&#x5199;</a></li>
-<li><a href="#&#x670D;&#x52A1;&#x5668;">&#x670D;&#x52A1;&#x5668;</a></li>
-<li><a href="#&#x76D1;&#x89C6;&#x6587;&#x4EF6;&#x53D8;&#x52A8;">&#x76D1;&#x89C6;&#x6587;&#x4EF6;&#x53D8;&#x52A8;</a><ul>
-<li><a href="#&#x5B8C;&#x6210;&#x540E;&#x90E8;&#x7F72;">&#x5B8C;&#x6210;&#x540E;&#x90E8;&#x7F72;</a><ul>
-<li><a href="#&#x4E24;&#x4E2A;&#x547D;&#x4EE4;&#x7684;&#x4F5C;&#x7528;&#x662F;&#x76F8;&#x540C;&#x7684;">&#x4E24;&#x4E2A;&#x547D;&#x4EE4;&#x7684;&#x4F5C;&#x7528;&#x662F;&#x76F8;&#x540C;&#x7684;</a></li>
+<li><a href="#简写">简写</a></li>
+<li><a href="#服务器">服务器</a></li>
+<li><a href="#监视文件变动">监视文件变动</a><ul>
+<li><a href="#完成后部署">完成后部署</a><ul>
+<li><a href="#两个命令的作用是相同的">两个命令的作用是相同的</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#&#x8349;&#x7A3F;">&#x8349;&#x7A3F;</a></li>
-<li><a href="#&#x6A21;&#x7248;scaffold">&#x6A21;&#x7248;&#xFF08;Scaffold&#xFF09;</a></li>
-<li><a href="#&#x8BBE;&#x7F6E;&#x6587;&#x7AE0;&#x6458;&#x8981;">&#x8BBE;&#x7F6E;&#x6587;&#x7AE0;&#x6458;&#x8981;</a></li>
-<li><a href="#&#x5199;&#x4F5C;">&#x5199;&#x4F5C;</a></li>
-<li><a href="#&#x56FE;&#x7247;&#x663E;&#x793A;">&#x56FE;&#x7247;&#x663E;&#x793A;</a></li>
-<li><a href="#&#x6DFB;&#x52A0;&#x5C0F;&#x56FE;&#x6807;">&#x6DFB;&#x52A0;&#x5C0F;&#x56FE;&#x6807;</a></li>
-<li><a href="#&#x63A8;&#x9001;&#x5230;&#x670D;&#x52A1;&#x5668;&#x4E0A;">&#x63A8;&#x9001;&#x5230;&#x670D;&#x52A1;&#x5668;&#x4E0A;</a></li>
+<li><a href="#草稿">草稿</a></li>
+<li><a href="#模版scaffold">模版（Scaffold）</a></li>
+<li><a href="#设置文章摘要">设置文章摘要</a></li>
+<li><a href="#写作">写作</a></li>
+<li><a href="#图片显示">图片显示</a></li>
+<li><a href="#添加小图标">添加小图标</a></li>
+<li><a href="#推送到服务器上">推送到服务器上</a></li>
 </ul>
 <!-- tocstop -->
-<h1 id="hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo -g //&#x5B89;&#x88C5;  </span><br><span class="line">npm update hexo -g //&#x5347;&#x7EA7;  </span><br><span class="line">hexo init blog //&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x751F;&#x6210;&#x6587;&#x4EF6;&#x5939;&#x4E3A;blog</span><br><span class="line">cd blog</span><br><span class="line">npm install //&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x5E93;</span><br><span class="line">hexo server //&#x8FD0;&#x884C;&#x6D4B;&#x8BD5;</span><br></pre></td></tr></table></figure>
-<h1 id="&#x7B80;&#x5199;"><a href="#&#x7B80;&#x5199;" class="headerlink" title="&#x7B80;&#x5199;"></a>&#x7B80;&#x5199;</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo n &quot;&#x6211;&#x7684;&#x535A;&#x5BA2;&quot; == hexo new &quot;&#x6211;&#x7684;&#x535A;&#x5BA2;&quot; //&#x65B0;&#x5EFA;&#x6587;&#x7AE0;</span><br><span class="line">hexo p == hexo publish</span><br><span class="line">hexo g == hexo generate //&#x751F;&#x6210;</span><br><span class="line">hexo s == hexo server //&#x542F;&#x52A8;&#x670D;&#x52A1;&#x9884;&#x89C8;</span><br><span class="line">hexo d == hexo deploy //&#x90E8;&#x7F72;</span><br></pre></td></tr></table></figure>
-<h1 id="&#x670D;&#x52A1;&#x5668;"><a href="#&#x670D;&#x52A1;&#x5668;" class="headerlink" title="&#x670D;&#x52A1;&#x5668;"></a>&#x670D;&#x52A1;&#x5668;</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">hexo server //Hexo &#x4F1A;&#x76D1;&#x89C6;&#x6587;&#x4EF6;&#x53D8;&#x52A8;&#x5E76;&#x81EA;&#x52A8;&#x66F4;&#x65B0;&#xFF0C;&#x60A8;&#x65E0;&#x987B;&#x91CD;&#x542F;&#x670D;&#x52A1;&#x5668;&#x3002;</span><br><span class="line">hexo server -s //&#x9759;&#x6001;&#x6A21;&#x5F0F;</span><br><span class="line">hexo server -p 5000 //&#x66F4;&#x6539;&#x7AEF;&#x53E3;</span><br><span class="line">hexo server -i 192.168.1.1 //&#x81EA;&#x5B9A;&#x4E49; IP</span><br><span class="line"></span><br><span class="line">hexo clean //&#x6E05;&#x9664;&#x7F13;&#x5B58; &#x7F51;&#x9875;&#x6B63;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#x53EF;&#x4EE5;&#x5FFD;&#x7565;&#x6B64;&#x6761;&#x547D;&#x4EE4;</span><br><span class="line">hexo g //&#x751F;&#x6210;&#x9759;&#x6001;&#x7F51;&#x9875;</span><br><span class="line">hexo d //&#x5F00;&#x59CB;&#x90E8;&#x7F72;</span><br></pre></td></tr></table></figure>
-<h1 id="&#x76D1;&#x89C6;&#x6587;&#x4EF6;&#x53D8;&#x52A8;"><a href="#&#x76D1;&#x89C6;&#x6587;&#x4EF6;&#x53D8;&#x52A8;" class="headerlink" title="&#x76D1;&#x89C6;&#x6587;&#x4EF6;&#x53D8;&#x52A8;"></a>&#x76D1;&#x89C6;&#x6587;&#x4EF6;&#x53D8;&#x52A8;</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate //&#x4F7F;&#x7528; Hexo &#x751F;&#x6210;&#x9759;&#x6001;&#x6587;&#x4EF6;&#x5FEB;&#x901F;&#x800C;&#x4E14;&#x7B80;&#x5355;</span><br><span class="line">hexo generate --watch //&#x76D1;&#x89C6;&#x6587;&#x4EF6;&#x53D8;&#x52A8;</span><br></pre></td></tr></table></figure>
-<h2 id="&#x5B8C;&#x6210;&#x540E;&#x90E8;&#x7F72;"><a href="#&#x5B8C;&#x6210;&#x540E;&#x90E8;&#x7F72;" class="headerlink" title="&#x5B8C;&#x6210;&#x540E;&#x90E8;&#x7F72;"></a>&#x5B8C;&#x6210;&#x540E;&#x90E8;&#x7F72;</h2><h3 id="&#x4E24;&#x4E2A;&#x547D;&#x4EE4;&#x7684;&#x4F5C;&#x7528;&#x662F;&#x76F8;&#x540C;&#x7684;"><a href="#&#x4E24;&#x4E2A;&#x547D;&#x4EE4;&#x7684;&#x4F5C;&#x7528;&#x662F;&#x76F8;&#x540C;&#x7684;" class="headerlink" title="&#x4E24;&#x4E2A;&#x547D;&#x4EE4;&#x7684;&#x4F5C;&#x7528;&#x662F;&#x76F8;&#x540C;&#x7684;"></a>&#x4E24;&#x4E2A;&#x547D;&#x4EE4;&#x7684;&#x4F5C;&#x7528;&#x662F;&#x76F8;&#x540C;&#x7684;</h3><p><code>hexo generate --deploy</code><br><code>hexo deploy --generate</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy -g</span><br><span class="line">hexo server -g</span><br></pre></td></tr></table></figure>
-<h1 id="&#x8349;&#x7A3F;"><a href="#&#x8349;&#x7A3F;" class="headerlink" title="&#x8349;&#x7A3F;"></a>&#x8349;&#x7A3F;</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;postName&quot; //&#x65B0;&#x5EFA;&#x6587;&#x7AE0;</span><br><span class="line">hexo new page &quot;pageName&quot; //&#x65B0;&#x5EFA;&#x9875;&#x9762;</span><br><span class="line">hexo generate //&#x751F;&#x6210;&#x9759;&#x6001;&#x9875;&#x9762;&#x81F3;public&#x76EE;&#x5F55;</span><br><span class="line">hexo server //&#x5F00;&#x542F;&#x9884;&#x89C8;&#x8BBF;&#x95EE;&#x7AEF;&#x53E3;&#xFF08;&#x9ED8;&#x8BA4;&#x7AEF;&#x53E3;4000&#xFF0C;&#x2019;ctrl + c&#x2019;&#x5173;&#x95ED;server&#xFF09;</span><br><span class="line">hexo deploy //&#x5C06;.deploy&#x76EE;&#x5F55;&#x90E8;&#x7F72;&#x5230;GitHub</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo new [layout] &lt;title&gt;</span><br><span class="line">hexo new photo &quot;My Gallery&quot;</span><br><span class="line">hexo new &quot;Hello World&quot; --lang tw</span><br></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">&#x53D8;&#x91CF;</th>
-<th style="text-align:left">&#x63CF;&#x8FF0;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">layout</td>
-<td style="text-align:left">&#x5E03;&#x5C40;</td>
-</tr>
-<tr>
-<td style="text-align:left">title</td>
-<td style="text-align:left">&#x6807;&#x9898;</td>
-</tr>
-<tr>
-<td style="text-align:left">data</td>
-<td style="text-align:left">&#x6587;&#x4EF6;&#x5EFA;&#x7ACB;&#x65E5;&#x671F;</td>
-</tr>
-</tbody>
-</table>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">title: &#x4F7F;&#x7528;Hexo&#x642D;&#x5EFA;&#x4E2A;&#x4EBA;&#x535A;&#x5BA2;</span><br><span class="line">layout: post</span><br><span class="line">date: 2014-03-03 19:07:43</span><br><span class="line">comments: true</span><br><span class="line">categories: Blog</span><br><span class="line">tags: [Hexo]</span><br><span class="line">keywords: Hexo, Blog</span><br><span class="line">description: &#x751F;&#x547D;&#x5728;&#x4E8E;&#x6298;&#x817E;&#xFF0C;&#x53C8;&#x628A;&#x535A;&#x5BA2;&#x6298;&#x817E;&#x5230;Hexo&#x4E86;&#x3002;&#x7ED9;Hexo&#x70B9;&#x8D5E;&#x3002;</span><br></pre></td></tr></table></figure>
-<h1 id="&#x6A21;&#x7248;scaffold"><a href="#&#x6A21;&#x7248;&#xFF08;Scaffold&#xFF09;" class="headerlink" title="&#x6A21;&#x7248;&#xFF08;Scaffold&#xFF09;"></a>&#x6A21;&#x7248;&#xFF08;Scaffold&#xFF09;</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new photo &quot;My Gallery&quot;</span><br></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">&#x53D8;&#x91CF;</th>
-<th style="text-align:left">&#x63CF;&#x8FF0;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">layout</td>
-<td style="text-align:left">&#x5E03;&#x5C40;</td>
-</tr>
-<tr>
-<td style="text-align:left">title</td>
-<td style="text-align:left">&#x6807;&#x9898;</td>
-</tr>
-<tr>
-<td style="text-align:left">data</td>
-<td style="text-align:left">&#x6587;&#x4EF6;&#x5EFA;&#x7ACB;&#x65E5;&#x671F;</td>
-</tr>
-</tbody>
-</table>
-<h1 id="&#x8BBE;&#x7F6E;&#x6587;&#x7AE0;&#x6458;&#x8981;"><a href="#&#x8BBE;&#x7F6E;&#x6587;&#x7AE0;&#x6458;&#x8981;" class="headerlink" title="&#x8BBE;&#x7F6E;&#x6587;&#x7AE0;&#x6458;&#x8981;"></a>&#x8BBE;&#x7F6E;&#x6587;&#x7AE0;&#x6458;&#x8981;</h1><p><code>&#x4EE5;&#x4E0A;&#x662F;&#x6587;&#x7AE0;&#x6458;&#x8981; &lt;!--more--&gt; &#x4EE5;&#x4E0B;&#x662F;&#x4F59;&#x4E0B;&#x5168;&#x6587;</code></p>
-<h1 id="&#x5199;&#x4F5C;"><a href="#&#x5199;&#x4F5C;" class="headerlink" title="&#x5199;&#x4F5C;"></a>&#x5199;&#x4F5C;</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo new page &lt;title&gt;</span><br><span class="line">hexo new post &lt;title&gt;</span><br></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">&#x53D8;&#x91CF;</th>
-<th style="text-align:left">&#x63CF;&#x8FF0;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">:title</td>
-<td style="text-align:left">&#x6807;&#x9898;</td>
-</tr>
-<tr>
-<td style="text-align:left">:year</td>
-<td style="text-align:left">&#x5EFA;&#x7ACB;&#x7684;&#x5E74;&#x4EFD;&#xFF08;4 &#x4F4D;&#x6570;&#xFF09;</td>
-</tr>
-<tr>
-<td style="text-align:left">:month</td>
-<td style="text-align:left">&#x5EFA;&#x7ACB;&#x7684;&#x6708;&#x4EFD;&#xFF08;2 &#x4F4D;&#x6570;&#xFF09;</td>
-</tr>
-<tr>
-<td style="text-align:left">:i_month</td>
-<td style="text-align:left">&#x5EFA;&#x7ACB;&#x7684;&#x6708;&#x4EFD;&#xFF08;&#x53BB;&#x6389;&#x5F00;&#x5934;&#x7684;&#x96F6;&#xFF09;</td>
-</tr>
-<tr>
-<td style="text-align:left">:day</td>
-<td style="text-align:left">&#x5EFA;&#x7ACB;&#x7684;&#x65E5;&#x671F;&#xFF08;2 &#x4F4D;&#x6570;&#xFF09;</td>
-</tr>
-<tr>
-<td style="text-align:left">:i_day</td>
-<td style="text-align:left">&#x5EFA;&#x7ACB;&#x7684;&#x65E5;&#x671F;&#xFF08;&#x53BB;&#x6389;&#x5F00;&#x5934;&#x7684;&#x96F6;&#xFF09;</td>
-</tr>
-</tbody>
-</table>
-<h1 id="&#x56FE;&#x7247;&#x663E;&#x793A;"><a href="#&#x56FE;&#x7247;&#x663E;&#x793A;" class="headerlink" title="&#x56FE;&#x7247;&#x663E;&#x793A;"></a>&#x56FE;&#x7247;&#x663E;&#x793A;</h1><p>&#x628A;&#x56FE;&#x7247;&#x653E;&#x5230; source/images &#x76EE;&#x5F55;&#x4E0B;</p>
-<p><code>![](images/xxx.jpg)</code></p>
-<h1 id="&#x6DFB;&#x52A0;&#x5C0F;&#x56FE;&#x6807;"><a href="#&#x6DFB;&#x52A0;&#x5C0F;&#x56FE;&#x6807;" class="headerlink" title="&#x6DFB;&#x52A0;&#x5C0F;&#x56FE;&#x6807;"></a>&#x6DFB;&#x52A0;&#x5C0F;&#x56FE;&#x6807;</h1><p>&#x5C06;<code>favicon.ico</code>&#x6587;&#x4EF6;&#x653E;&#x5728; source &#x76EE;&#x5F55;&#x4E0B;<br>&#x914D;&#x7F6E; hexoThemekacper &#x4E3B;&#x9898;&#x91CC;&#x7684;<code>_config.yml</code></p>
-<p><code>favicon: /favicon.ico</code></p>
-<h1 id="&#x63A8;&#x9001;&#x5230;&#x670D;&#x52A1;&#x5668;&#x4E0A;"><a href="#&#x63A8;&#x9001;&#x5230;&#x670D;&#x52A1;&#x5668;&#x4E0A;" class="headerlink" title="&#x63A8;&#x9001;&#x5230;&#x670D;&#x52A1;&#x5668;&#x4E0A;"></a>&#x63A8;&#x9001;&#x5230;&#x670D;&#x52A1;&#x5668;&#x4E0A;</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo n //&#x5199;&#x6587;&#x7AE0;</span><br><span class="line">hexo g //&#x751F;&#x6210;</span><br><span class="line">hexo d //&#x90E8;&#x7F72; #&#x53EF;&#x4E0E;hexo g&#x5408;&#x5E76;&#x4E3A; hexo d -g</span><br></pre></td></tr></table></figure>
-
+<h1 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo -g //安装  </span><br><span class="line">npm update hexo -g //升级  </span><br><span class="line">hexo init blog //初始化，生成文件夹为blog</span><br><span class="line">cd blog</span><br><span class="line">npm install //安装依赖库</span><br><span class="line">hexo server //运行测试</span><br></pre></td></tr></table></figure>
+<h1 id="简写"><a href="#简写" class="headerlink" title="简写"></a>简写</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo n &quot;我的博客&quot; == hexo new &quot;我的博客&quot; //新建文章</span><br><span class="line">hexo p == hexo publish</span><br><span class="line">hexo g == hexo generate //生成</span><br><span class="line">hexo s == hexo server //启动服务预览</span><br><span class="line">hexo d == hexo deploy //部署</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -390,6 +299,10 @@
 
       
 
+      
+        <p class="article-more-link">
+          <a  href="/2016/03/01/Hero常用命令/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
